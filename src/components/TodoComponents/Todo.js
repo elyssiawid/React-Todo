@@ -1,8 +1,16 @@
 import React from "react";
 
 class Todo extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
-    return <ul>{this.props.task}</ul>;
+    console.log(this.props.list.task);
+    return (
+      <ul>
+        <li>{this.props.list.task}</li>
+      </ul>
+    );
   }
 }
 
