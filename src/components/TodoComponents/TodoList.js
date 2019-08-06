@@ -1,5 +1,5 @@
 import React from "react";
-import Todo from "./Todo.js";
+import Todo from "./Todo";
 
 class TodoList extends React.Component {
   constructor(props) {
@@ -9,11 +9,13 @@ class TodoList extends React.Component {
     console.log("ALOHA", this.props.list);
     return (
       <div>
-        <>
-          {this.props.list.map(item => (
-            <Todo key={item.id} list={this.props.list} />
-          ))}
-        </>
+        {this.props.list.map(item => (
+          <Todo
+            key={item.id}
+            list={item}
+            onClick={() => this.props.delete(item.id)}
+          />
+        ))}
       </div>
     );
   }
