@@ -1,0 +1,7 @@
+ul li {
+  transition: all ease 0.3s;
+}
+
+ul li:hover {
+  text-decoration: line-through;
+}
